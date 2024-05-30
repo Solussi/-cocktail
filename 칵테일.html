@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>심리 테스트</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>심리 테스트</h1>
+        <form id="quizForm">
+            <div class="question" id="question1">
+                <p>자신의 성격을 색깔로 표현한다면?</p>
+                <label><input type="radio" name="q1" value="B"> 바다 같은 푸름</label>
+                <label><input type="radio" name="q1" value="C"> 밤하늘 같은 어스름</label>
+                <label><input type="radio" name="q1" value="A"> 태양과도 같은 붉음</label>
+                <button type="button" onclick="nextQuestion(1)">다음</button>
+            </div>
+            <div class="question hidden" id="question2">
+                <p>오늘 당신이 가장 많이 느낀 감정은?</p>
+                <label><input type="radio" name="q2" value="C"> 스트레스와 긴장</label>
+                <label><input type="radio" name="q2" value="A"> 흥분과 기대</label>
+                <label><input type="radio" name="q2" value="B"> 만족과 감사</label>
+                <button type="button" onclick="nextQuestion(2)">다음</button>
+            </div>
+            <div class="question hidden" id="question3">
+                <p>오늘 하루를 짧게 설명한다면?</p>
+                <label><input type="radio" name="q3" value="B"> 음, 그냥 대충 보냈는데?</label>
+                <label><input type="radio" name="q3" value="C"> 하루가 길더라...</label>
+                <label><input type="radio" name="q3" value="A"> 오늘 하루 진짜 알찼어!</label>
+                <button type="button" onclick="nextQuestion(3)">다음</button>
+            </div>
+            <div class="question hidden" id="question4">
+                <p>오늘 하루 중 가장 기억에 남는 순간은?</p>
+                <label><input type="radio" name="q4" value="C"> 끝도 없이 몰려드는 일...</label>
+                <label><input type="radio" name="q4" value="B"> 아무것도 일어나지 않는 지금.</label>
+                <label><input type="radio" name="q4" value="A"> 새로운 도전이나 성취!</label>
+                <button type="button" onclick="nextQuestion(4)">다음</button>
+            </div>
+            <div class="question hidden" id="question5">
+                <p>지금 가장 원하는 것은 무엇인가요?</p>
+                <label><input type="radio" name="q5" value="B"> 나를 진정시켜 줄 평온함.</label>
+                <label><input type="radio" name="q5" value="A"> 오늘을 열심히 산 나를 위한 멋들어진 보상~</label>
+                <label><input type="radio" name="q5" value="C"> 나를 위로해 줄 무언가...</label>
+                <button type="button" onclick="showResult()">결과 보기</button>
+            </div>
+        </form>
+        <div id="result" class="hidden">
+            <h2 id="headerText"></h2>
+            <img id="resultImage" src="" alt="결과 이미지">
+            <p id="resultText"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
